@@ -1,13 +1,13 @@
 import CardItem from "../models/CardItem";
-import search from "../assets/images/homepage/service_cards/search.svg";
-import pharmacy from "../assets/images/homepage/service_cards/pharmacy.svg";
-import consultation from "../assets/images/homepage/service_cards/consultation.svg";
-import details from "../assets/images/homepage/service_cards/details.svg";
-import emergency from "../assets/images/homepage/service_cards/emergency.svg";
-import tracking from "../assets/images/homepage/service_cards/tracking.svg";
-import image1 from '../assets/images/homepage/articles/image-1.png';
-import image2 from '../assets/images/homepage/articles/image-2.png';
-import image3 from '../assets/images/homepage/articles/image-3.png';
+import search from "../assets/images/homepage/service_cards/ic_search.svg";
+import pharmacy from "../assets/images/homepage/service_cards/ic_pharmacy.svg";
+import consultation from "../assets/images/homepage/service_cards/ic_consultation.svg";
+import details from "../assets/images/homepage/service_cards/ic_details.svg";
+import emergency from "../assets/images/homepage/service_cards/ic_emergency.svg";
+import tracking from "../assets/images/homepage/service_cards/ic_tracking.svg";
+import image1 from '../assets/images/homepage/articles/ic_first_article.png';
+import image2 from '../assets/images/homepage/articles/ic_second_article.png';
+import image3 from '../assets/images/homepage/articles/ic_third_article.png';
 
 const servicesGridCards: CardItem[] = [
     {
