@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# Effective lab №1, Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Screenshots
 
-Currently, two official plugins are available:
+### Health app screen
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+|                       Header                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/5cdea95d-ce8a-4525-b5d6-b91ec368f21a" height="400"> |
+|                       Main                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/c224513f-7472-4b83-8130-30721d354282" height="400"> |
+|                       Main                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/b1cb129c-8716-43d6-bfb1-c9e2d4d0de32" height="400"> |
+|                       Main                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/adf7d054-920e-4172-8013-7b5a5e6c965a" height="400"> |
+|                       Slider                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/c276db83-42b5-4baa-8cf0-efb278df62cc" height="400"> |
+|                       Article                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/230183d8-053f-412f-95dc-f0886eb41a2d" height="400"> |
+|                       Bottom                           |
+|:------------------------------------------------------:|
+| <img src="https://github.com/DenisPopkov/HealthApp/assets/57343209/0d839c54-9f91-4989-a1d3-8ef1b246008a" height="400"> |
 
-## Expanding the ESLint configuration
+## Topics
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* Typescript
+* React
 
-- Configure the top-level `parserOptions` property like this:
+## How to run
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+* You need WebStorm or another IDE
+* typescript ver. ^4.9.5, react ^18.2.0
+* In package.json call "react-scripts start"
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Github pages
+* https://denispopkov.github.io/HealthApp/
+
+## Who to contact with questions
+
+* [Popkov Denis](https://t.me/MolodoyDenis)
