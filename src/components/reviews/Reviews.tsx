@@ -1,8 +1,8 @@
 import style from './reviews.module.scss';
-import dots from '../../assets/images/dots.svg';
-import dotsWhite from '../../assets/images/dots_white.svg';
-import leftArrow from '../../assets/images/homepage/slider_controls/left_arrow.svg';
-import rightArrow from '../../assets/images/homepage/slider_controls/right_arrow.svg';
+import dots from '../../assets/images/ic_dots.svg';
+import dotsWhite from '../../assets/images/ic_dots_white.svg';
+import leftArrow from '../../assets/images/homepage/slider_controls/ic_left_arrow.svg';
+import rightArrow from '../../assets/images/homepage/slider_controls/ic_right_arrow.svg';
 import {useEffect, useState} from 'react';
 import generatorClient, {UserData, UsersResponse} from "random-users-generator";
 

@@ -1,7 +1,7 @@
 import styles from './card_grid.module.scss'
 import {ReactElement} from 'react';
-import left from '../../assets/images/card_grid/left.png';
-import right from '../../assets/images/card_grid/right.png';
+import left from '../../assets/images/card_grid/ic_left.png';
+import right from '../../assets/images/card_grid/ic_right.png';
 
 const CardGrid = (props: {
     title: string,
