@@ -28,8 +28,8 @@
 ## How to run
 
 * You need WebStorm or another IDE
-* typescript ver. ^4.9.5, react ^18.2.0
-* In package.json call "react-scripts start"
+* Typescript ver. 4.9.5, React ver. 18.2.0, npm ver. 10.2.3
+* In package.json click on "react-scripts start"
 
 ## Github pages
 * https://denispopkov.github.io/HealthApp/
