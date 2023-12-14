@@ -8,8 +8,8 @@ const Button = (props: {
 }) => {
     return <>
         <a href='#!' className={`${styles.button} ${props.type ? styles[props.type] : ''}`}>
-            {props.text}
-            <div className={styles.content}>
+            <div className={props.content ? styles.horizontalContainer : styles.emptyContainer}>
+                <span>{props.text}</span>
                 {props.content}
             </div>
         </a>

@@ -23,6 +23,24 @@
     margin-left: 16px;
   }
 
+  .horizontalContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .horizontalContainer span {
+    padding-right: 10px;
+  }
+
+  .emptyContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .emptyContainer span {
+    padding-right: 0;
+  }
+
   &.primary {
     background-color: $blue;
     color: #FFF;
