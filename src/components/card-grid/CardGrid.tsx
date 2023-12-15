@@ -1,15 +1,16 @@
 import styles from './card_grid.module.scss'
-import {ReactElement} from 'react';
+import {ReactElement, ReactNode} from 'react';
 import left from '../../assets/images/card_grid/ic_left_drip.png';
 import right from '../../assets/images/card_grid/ic_right_drip.png';
 
 const CardGrid = (props: {
-    title: string,
+    title?: string,
     description?: string,
-    children: ReactElement[],
+    children: ReactNode | ReactNode[],
     button?: ReactElement,
     type?: 'left' | 'right',
 }) => {
+
     return <>
         <section className={styles.cardGrid}>
             <img alt='banner-bg'
@@ -18,7 +19,7 @@ const CardGrid = (props: {
 
             <div className={styles.title}>{props.title}</div>
 
-            <hr/>
+            {props.title && <hr/>}
 
             <div className={styles.description}>{props.description}</div>
 

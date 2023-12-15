@@ -13,8 +13,28 @@ import Footer from './components/footer/Footer';
 import rightArrow from "./assets/images/homepage/slider_controls/ic_right_arrow.svg";
 import downArrow from './assets/images/homepage/slider_controls/ic_down_arrow.svg';
 import style from "./components/card/card.module.scss";
+import React, {useState} from "react";
 
 function App() {
+
+    const [showAdditionalCards, setShowAdditionalCards] = useState(false);
+
+    const handleButtonClick = () => {
+        setShowAdditionalCards(!showAdditionalCards);
+    }
+
+    const cards = articlesGridCards.map((item, index) => {
+        return <Card
+            key={`article_card_${index}`}
+            image={item.image}
+            imageFull={true}
+            title={item.title}
+            description={item.description}
+            button={item.button}
+            arrowButton={rightArrow}
+        />
+    })
+
     return (
         <>
             <Navigation
@@ -23,8 +43,12 @@ function App() {
 
             <Banner
                 title='Virtual healthcare for you'
-                content='HealthCare provides progressive, and affordable healthcare, accessible on mobile and online for everyone'
-                button={<Button type='primary' text="Consult Today"/>}
+                content='Our service provides progressive, and affordable healthcare, accessible on mobile and online for everyone'
+                button={
+                    <div style={{paddingTop: '40px'}}>
+                        <Button type='primary' text="Consult Today"/>
+                    </div>
+                }
                 illustration={illustration}/>
 
             <CardGrid
@@ -47,8 +71,12 @@ function App() {
                 separator={true}
                 type='reverse'
                 title='Leading healthcare providers'
-                content='HealthCare provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver'
-                button={<Button text="Learn more"/>}
+                content='We provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver'
+                button={
+                    <div style={{paddingTop: '40px'}}>
+                        <Button text="Learn more"/>
+                    </div>
+                }
                 illustration={illustration2}/>
 
             <Banner
@@ -57,37 +85,39 @@ function App() {
                 content='Our dedicated patient engagement app and
         web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely'
                 button={
-                    <Button text='Download' content={
-                        <img className={style.img}
-                             src={downArrow}
-                             width={15}
-                             height={15}
-                             alt='arrow-down'
-                        />
-                    }/>
+                    <div style={{paddingTop: '20px'}}>
+                        <Button text='Download' content={
+                            <img className={style.img}
+                                 src={downArrow}
+                                 width={15}
+                                 height={15}
+                                 alt='arrow-down'
+                            />
+                        }/>
+                    </div>
                 }
                 illustration={illustration3}/>
 
             <Reviews/>
 
-            <CardGrid
-                type='right'
-                title='Check out our latest article'
-                button={<Button text='View all'/>}>
-
-                {
-                    articlesGridCards.map((item, index) => {
-                        return <Card
-                            key={`article_card_${index}`}
-                            image={item.image}
-                            imageFull={true}
-                            title={item.title}
-                            description={item.description}
-                            button={item.button}
-                            arrowButton={rightArrow}/>
-                    })
-                }
-            </CardGrid>
+            {
+                showAdditionalCards ? <div>
+                    <CardGrid
+                        type='right'
+                        title='Check out our latest article'
+                        children={cards}/>
+                    <CardGrid
+                        type='right'
+                        button={<Button text={showAdditionalCards ? 'Hide' : 'View all'} onClick={handleButtonClick}/>}>
+                        {cards}
+                    </CardGrid>
+                </div> : <CardGrid
+                    type='right'
+                    title='Check out our latest article'
+                    button={<Button text={showAdditionalCards ? 'Hide' : 'View all'} onClick={handleButtonClick}/>}>
+                    {cards}
+                </CardGrid>
+            }
 
             <Footer logoText='HealthCare'/>
         </>

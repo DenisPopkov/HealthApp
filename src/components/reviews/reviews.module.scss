@@ -98,7 +98,15 @@
     justify-content: center;
     gap: 20px;
 
-    .arrow,
+    .arrow {
+      padding: 60px;
+      opacity: 0.4;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
     .control {
       opacity: 0.4;
       cursor: pointer;
